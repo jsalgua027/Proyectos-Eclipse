@@ -37,7 +37,7 @@ public class ControladorEncargado {
 		this.em.close();
 	}
 	
-	public void modificarCliente(Encargado e) {
+	public void modificarEncargado(Encargado e) {
 		this.em = entityManagerFactory.createEntityManager();
 		this.em.getTransaction().begin();
 		//merge() comprueba que exita una entidad con el mismo identificador y actualiza los atributos

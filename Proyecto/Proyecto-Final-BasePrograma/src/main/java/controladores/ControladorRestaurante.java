@@ -29,7 +29,7 @@ public class ControladorRestaurante {
 		this.em.close();
 	}
 
-	public void modificarCliente(Restaurante r) {
+	public void modificarRestaurante(Restaurante r) {
 		this.em = entityManagerFactory.createEntityManager();
 		this.em.getTransaction().begin();
 		this.em.merge(r);
