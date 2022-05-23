@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ControladorAlquiler.java&apos; to &apos;controladores.ControladorEncargado.java&apos;&#x0D;&#x0A;- Original project: &apos;rentacarJPA&apos;&#x0D;&#x0A;- Destination element: &apos;controladores.ControladorEncargado.java&apos;&#x0D;&#x0A;- Original element: &apos;controladores.ControladorAlquiler.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=BaseDprograma/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;controladores{ControladorEncargado.java" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;controladores{ControladorAlquiler.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1653152853754" units="1" version="1.0"/>
+</session>

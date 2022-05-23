@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="controladores.ControladorCliente"/>
+    <fullyQualifiedTypeName name="entidades.Cliente"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="entidades.Restaurante"/>
+    <fullyQualifiedTypeName name="entidades.Encargado"/>
+    <fullyQualifiedTypeName name="controladores.ControladorRestaurante"/>
+    <fullyQualifiedTypeName name="controladores.ControladorEncargado"/>
+</qualifiedTypeNameHistroy>
