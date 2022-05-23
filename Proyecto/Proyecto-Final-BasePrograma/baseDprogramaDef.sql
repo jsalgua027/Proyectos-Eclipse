@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS `basedprograma`.`restaurante` ;
 
 CREATE TABLE IF NOT EXISTS `basedprograma`.`restaurante` (
   `codRest` INT NOT NULL auto_increment,
-  `codEncar` INT NULL DEFAULT NULL,
+  
   `numTelRest` VARCHAR(60) NULL DEFAULT NULL,
   `direRest` VARCHAR(200) NULL DEFAULT NULL,
   `nomRest` VARCHAR(60) NULL DEFAULT NULL,
@@ -51,8 +51,8 @@ CREATE TABLE IF NOT EXISTS `basedprograma`.`restaurante` (
   CONSTRAINT `fk_restaurante_encargado1`
     FOREIGN KEY (`encargado_codEncar` )
     REFERENCES `basedprograma`.`encargado` (`codEncar`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE cascade
+    ON UPDATE cascade)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;

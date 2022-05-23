@@ -24,8 +24,9 @@ public class Encargado implements Serializable {
 
 	private String numTelEnca;
 
-	//bi-directional one-to-one association to Restaurante
-	@OneToOne(mappedBy="encargado", fetch=FetchType.LAZY)
+	//uni-directional one-to-one association to Restaurante
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="codEncar", referencedColumnName="encargado_codEncar", updatable=false, insertable=false)
 	private Restaurante restaurante;
 
 	public Encargado() {
@@ -70,23 +71,5 @@ public class Encargado implements Serializable {
 	public void setRestaurante(Restaurante restaurante) {
 		this.restaurante = restaurante;
 	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Encargado [codEncar=");
-		builder.append(codEncar);
-		builder.append(", diasTraba=");
-		builder.append(diasTraba);
-		builder.append(", nomEncar=");
-		builder.append(nomEncar);
-		builder.append(", numTelEnca=");
-		builder.append(numTelEnca);
-		builder.append(", restaurante=");
-		builder.append(restaurante);
-		builder.append("]");
-		return builder.toString();
-	}
-	
 
 }

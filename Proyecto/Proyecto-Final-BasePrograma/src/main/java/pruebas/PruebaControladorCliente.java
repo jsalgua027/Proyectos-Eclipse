@@ -29,7 +29,7 @@ public class PruebaControladorCliente {
 		System.out.println("----------anadidod dos clientes; el 320 y el 321--------");
 		
 		Encargado encar2 = new Encargado();
-		encar2.setCodEncar(003);
+		
 		encar2.setDiasTraba(4);
 		encar2.setNomEncar("PPPPP");
 		encar2.setNumTelEnca("9999999");
@@ -37,11 +37,12 @@ public class PruebaControladorCliente {
 		ee.crearEncargado(encar2);
 		
 		Restaurante rest = new Restaurante();
-		rest.setCodRest(003);
+		
 		rest.setDireRest("AAAAAAAAAAA");
-		rest.setEncargado(encar2);
+		rest.setEncargado_codEncar(0);
 		rest.setNomRest("ÑÑÑÑÑÑÑÑÑ");
 		rest.setNumTelRest("555555555");
+	
 		rr.crearRestaurante(rest);
 		
 		

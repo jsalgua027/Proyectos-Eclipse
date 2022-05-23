@@ -2,7 +2,6 @@ package entidades;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
@@ -26,15 +25,6 @@ public class Restaurante implements Serializable {
 	private String nomRest;
 
 	private String numTelRest;
-
-	//bi-directional many-to-one association to Cliente
-	@OneToMany(mappedBy="restaurante")
-	private List<Cliente> Tiposclientes;
-
-	//bi-directional one-to-one association to Encargado
-	@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="codEncar")
-	private Encargado encargado;
 
 	public Restaurante() {
 	}
@@ -79,56 +69,4 @@ public class Restaurante implements Serializable {
 		this.numTelRest = numTelRest;
 	}
 
-	public List<Cliente> getTiposclientes() {
-		return this.Tiposclientes;
-	}
-
-	public void setTiposclientes(List<Cliente> Tiposclientes) {
-		this.Tiposclientes = Tiposclientes;
-	}
-
-	public Cliente addTiposcliente(Cliente Tiposcliente) {
-		getTiposclientes().add(Tiposcliente);
-		Tiposcliente.setRestaurante(this);
-
-		return Tiposcliente;
-	}
-
-	public Cliente removeTiposcliente(Cliente Tiposcliente) {
-		getTiposclientes().remove(Tiposcliente);
-		Tiposcliente.setRestaurante(null);
-
-		return Tiposcliente;
-	}
-
-	public Encargado getEncargado() {
-		return this.encargado;
-	}
-
-	public void setEncargado(Encargado encargado) {
-		this.encargado = encargado;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Restaurante [codRest=");
-		builder.append(codRest);
-		builder.append(", direRest=");
-		builder.append(direRest);
-		builder.append(", encargado_codEncar=");
-		builder.append(encargado_codEncar);
-		builder.append(", nomRest=");
-		builder.append(nomRest);
-		builder.append(", numTelRest=");
-		builder.append(numTelRest);
-		builder.append(", Tiposclientes=");
-		builder.append(Tiposclientes);
-		builder.append(", encargado=");
-		builder.append(encargado);
-		builder.append("]");
-		return builder.toString();
-	}
-	
-	
 }
